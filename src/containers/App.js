@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'redux';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
       <Route path="/howitworks" component={HowItWorks} />
       <Route path="/signup" component={Signup} />
       <Route exact path="/login" component={Login} />
-      <Route exact path="/postjob" component={PostJob} />
+      <Route exgitct path="/postjob" component={PostJob} />
       <Route exact path="/contact" component={Contact} />
 
       {/* logged in  */}
