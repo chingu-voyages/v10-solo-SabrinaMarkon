@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // components
-import Profile from '../components/Profile';
+import Profile from '../../components/Profile';
 
 let wrapper;
 

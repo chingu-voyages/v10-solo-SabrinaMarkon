@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // components
-import NotFound from '../components/NotFound';
+import NotFound from '../../components/NotFound';
 
 let wrapper;
 

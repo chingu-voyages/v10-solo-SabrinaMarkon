@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // components
-import UserMain from '../components/UserMain';
+import UserMain from '../../components/UserMain';
 
 let wrapper;
 

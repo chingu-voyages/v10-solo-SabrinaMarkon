@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // components
-import Money from '../components/Money';
+import Money from '../../components/Money';
 
 let wrapper;
 

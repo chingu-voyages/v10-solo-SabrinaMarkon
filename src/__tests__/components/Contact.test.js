@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // components
-import Contact from '../components/Contact';
+import Contact from '../../components/Contact';
 
 let wrapper;
 

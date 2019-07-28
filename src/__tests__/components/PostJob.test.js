@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // components
-import PostJob from '../components/PostJob';
+import PostJob from '../../components/PostJob';
 
 let wrapper;
 

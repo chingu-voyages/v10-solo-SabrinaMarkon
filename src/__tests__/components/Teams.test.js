@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // components
-import Teams from '../components/Teams';
+import Teams from '../../components/Teams';
 
 let wrapper;
 

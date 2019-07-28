@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // components
-import Login from '../components/Login';
+import Login from '../../components/Login';
 
 let wrapper;
 
