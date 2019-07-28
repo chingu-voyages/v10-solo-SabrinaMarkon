@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 // components
+import Home from '../components/Home';
 import HowItWorks from '../components/HowItWorks';
 import Signup from '../components/Signup';
 import Login from '../components/Login';
@@ -25,7 +26,6 @@ export default class App extends Component {
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  {/* Do not include a Route with the App component or there will be an infinite loop because this is ALREADY the App component!  */}
                   <Link to="/" className="nav-link">Home</Link>
                 </li>
                 <li className="navbar-item">
@@ -47,27 +47,28 @@ export default class App extends Component {
             </div>
           </nav>
           {/* ROUTES  */}
-          {/* 1. not logged in  */}
-          <Route path="/howitworks" component={HowItWorks} />
-          <Route path="/signup" component={Signup} />
-          <Route path="/login" component={Login} />
-          <Route path="/postjob" component={PostJob} />
-          <Route path="/contact" component={Contact} />
-    
-          {/* 2. logged in  */}
-          {/* main members area after login - maybe reputation here? */}
-          <Route path="/main" component={UserMain} />
-          {/* profile should include reputation information (maybe) */}
-          <Route path="/profile" component={Profile} />
-          {/* teams you are a member of, create a new team, invites, invite others */}
-          <Route path="/teams" component={Teams} />
-          {/* jobs your team is working on. jobs you want to hire a team for. job list to bid on. */}
-          <Route path="/jobs/:type" component={Jobs} />
-          {/* your earnings, your teams' earnings per team, owed and by which employer. Payments you owe others you have hired  */}
-          <Route path="/money/:type" component={Money} />
-    
-          {/* custom 404  */}
-          <Route component={NotFound} />
+          <Switch>
+            {/* 1. not logged in  */}
+            <Route exact path="/" component={Home} />
+            <Route path="/howitworks" component={HowItWorks} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/login" component={Login} />
+            <Route path="/postjob" component={PostJob} />
+            <Route path="/contact" component={Contact} />
+            {/* 2. logged in  */}
+            {/* main members area after login - maybe reputation here? */}
+            <Route path="/main" component={UserMain} />
+            {/* profile should include reputation information (maybe) */}
+            <Route path="/profile" component={Profile} />
+            {/* teams you are a member of, create a new team, invites, invite others */}
+            <Route path="/teams" component={Teams} />
+            {/* jobs your team is working on. jobs you want to hire a team for. job list to bid on. */}
+            <Route path="/jobs/:type" component={Jobs} />
+            {/* your earnings, your teams' earnings per team, owed and by which employer. Payments you owe others you have hired  */}
+            <Route path="/money/:type" component={Money} />
+            {/* 404  */}
+            <Route component={NotFound} />
+          </Switch>
         </div>
       </Router>
     );
