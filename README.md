@@ -15,9 +15,3 @@ Webpack
 SASS
 Babel
 Fonts - Open Sans or Roboto, Playfair Display or Georgia
-
-# Strengthen:
-Testing Skills
-Redux
-MongoDB
-
