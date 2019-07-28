@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { shallow } from 'enzyme';
 
-export default class UserMain extends Component {
-  constructor(props) {
-    super(props);
+// components
+import UserMain from '../components/UserMain';
 
+let wrapper;
 
-  }
+beforeEach(() => {
+  wrapper = shallow(<UserMain />);
+});
 
-  render() {
-    return (
-      <div>
-        <h1>UserMain</h1>
-      </div>
-    )
-  }
-}
+describe('Testing UserMain component', () => {
+  it('should render an h1 heading with the correct text', () => {
+    expect(wrapper.find('h1').text().toEqual('UserMain'));
+  });
+});
