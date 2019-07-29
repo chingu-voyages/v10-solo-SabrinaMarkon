@@ -13,7 +13,7 @@ import Profile from '../components/Profile';
 import Teams from '../components/Teams';
 import Jobs from '../components/Jobs';
 import Money from '../components/Money';
-import NotFound from '../components/NotFound';
+// import NotFound from '../components/NotFound';
 
 export default class App extends Component {
   render() {
