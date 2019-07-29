@@ -58,6 +58,6 @@ export default class Contact extends Component {
           <button className="btn btn-primary" type="submit">Send</button>
         </form>
       </div>
-    )
+    );
   }
 }

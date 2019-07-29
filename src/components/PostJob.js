@@ -117,6 +117,6 @@ export default class PostJob extends Component {
           <button className="btn btn-primary" type="submit">Submit</button>
         </form>
       </div>
-    )
+    );
   }
 }

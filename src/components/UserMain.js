@@ -8,6 +8,6 @@ export default class UserMain extends Component {
       <div>
         <h1>UserMain</h1>
       </div>
-    )
+    );
   }
 }

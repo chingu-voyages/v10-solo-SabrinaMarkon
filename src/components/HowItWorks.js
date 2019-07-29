@@ -11,6 +11,6 @@ export default class HowItWorks extends Component {
           Lorem ipsum
         </div>
       </div>
-    )
+    );
   }
 }

@@ -8,6 +8,6 @@ export default class Jobs extends Component {
       <div>
         <h1>Jobs</h1>
       </div>
-    )
+    );
   }
 }

@@ -8,6 +8,6 @@ export default class Signup extends Component {
       <div>
         <h1>Signup</h1>
       </div>
-    )
+    );
   }
 }

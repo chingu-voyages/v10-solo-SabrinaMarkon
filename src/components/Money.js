@@ -7,6 +7,6 @@ export default class Money extends Component {
       <div>
         <h1>Money</h1>
       </div>
-    )
+    );
   }
 }
