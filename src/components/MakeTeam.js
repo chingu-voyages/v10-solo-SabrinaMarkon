@@ -5,10 +5,10 @@ export default class MakeTeam {
     super(props);
     this.state = {
       id: null,
-      teamName: '',
-      teamDescription: '',
-      teamCategories: [], // should be in its own table with teamid<->categoryid
-      teamMembers: [
+      name: '',
+      description: '',
+      categories: [], // should be in its own table with teamid<->categoryid
+      members: [
         {userid: '', job_title: '', skills: [{skill: 'adsfdfdf', level: 'Beginner'}, {skill: 'ffffff', level: 'Lead'}]}, 
         {userid: '', job_title: '', skills: [{skill: 'hhhhh', level: 'Beginner'}, {skill: 'jjjjj', level: 'Senior'}]}  //..... job_title can be different for each team a person is a member of.
       ],
@@ -49,22 +49,22 @@ export default class MakeTeam {
         <h1>Build a Dev Team!</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label htmlFor="teamName">Team Name</label>
-            <input type="text" className="form-control" id="teamName" aria-describedby="Team Name" 
+            <label htmlFor="name">Team Name</label>
+            <input type="text" className="form-control" id="name" aria-describedby="Team Name" 
             placeholder="Enter Team Name" value={this.state.name} onChange={this.handleChange} />
           </div>
           <div className="form-group">
-            <label htmlFor="teamDescription">About Your Dev Team</label>
-            <textarea className="form-control" id="teamDescription" aria-describedby="Dev Team Description" 
-            placeholder="Enter Dev Team Description" rows="10" value={this.state.teamDescription} onChange={this.handleChange}></textarea>
+            <label htmlFor="description">About Your Dev Team</label>
+            <textarea className="form-control" id="description" aria-describedby="Dev Team Description" 
+            placeholder="Enter Dev Team Description" rows="10" value={this.state.description} onChange={this.handleChange}></textarea>
           </div>
           
           {/* Add part of form to add users and each of their skills/levels. */}
 
           <div className="form-group">
             {/* Get categories from database  */}
-            <label htmlFor="teamCategories">Preferred Fields</label>
-              <select multiple id="teamCategories" className="form-control" onChange={this.handleChange}>
+            <label htmlFor="categories">Preferred Job Categories</label>
+              <select multiple id="categories" className="form-control" onChange={this.handleChange}>
               <option defaultValue disabled>Choose One or More...</option>
               <option>All</option>
               <option>Web Apps</option>
