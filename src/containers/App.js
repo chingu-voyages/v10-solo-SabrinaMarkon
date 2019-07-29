@@ -66,8 +66,10 @@ export default class App extends Component {
             <Route path="/jobs/:type" component={Jobs} />
             {/* your earnings, your teams' earnings per team, owed and by which employer. Payments you owe others you have hired  */}
             <Route path="/money/:type" component={Money} />
-            {/* 404  */}
-            <Route component={NotFound} />
+            {/* 404 Custom Page */}
+            {/* <Route component={NotFound} /> */}
+            {/* 404 redirect to home page  */}
+            <Route component={Home} />
           </Switch>
         </div>
       </Router>

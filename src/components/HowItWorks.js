@@ -7,6 +7,9 @@ export default class HowItWorks extends Component {
     return (
       <div>
         <h1>HowItWorks</h1>
+        <div>
+          Lorem ipsum
+        </div>
       </div>
     )
   }
