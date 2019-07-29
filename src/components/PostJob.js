@@ -101,6 +101,7 @@ export default class PostJob extends Component {
             <label htmlFor="categories">Categories</label>
               <select multiple id="categories" className="form-control" onChange={this.handleChange}>
               <option defaultValue disabled>Choose One or More...</option>
+              <option>Any</option>
               <option>Web Apps</option>
               <option>Games</option>
               <option>WordPress</option>
