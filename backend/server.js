@@ -4,9 +4,11 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
-// connect to mongodb:
+// connect to mongodb in an object-oriented way.
 const mongoose = require('mongoose');
 const PORT = 4000;
+
+let User = require('./models/user.model');
 
 // pass middleware
 app.use(cors());
