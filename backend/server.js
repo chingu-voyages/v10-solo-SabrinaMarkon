@@ -8,6 +8,8 @@ app.use(cors());
 const PORT = 4000; // backend port.
 
 // Routes:
+const bidRouter = require('./routes/bid.routes');
+app.use('/bids', bidRouter);
 const categoryRouter = require('./routes/category.routes');
 app.use('/categories', categoryRouter);
 const emailRouter = require('./routes/email.routes');
@@ -16,7 +18,7 @@ const jobIdCategoryIdRouter = require('./routes/jobIdCategoryId.routes');
 app.use('/jobIdCategoryIds', jobIdCategoryIdRouter);
 const jobRouter = require('./routes/job.routes');
 app.use('/jobs', jobRouter);
-const skillLevelNamesRouter = require('./routes/skillLevelNames.routes');
+const skillLevelNamesRouter = require('./routes/skillLevelName.routes');
 app.use('/skillLevelNames', skillLevelNamesRouter);
 const teamRoleRouter = require('./routes/teamRole.routes');
 app.use('/teamRoles', teamRoleRouter);
