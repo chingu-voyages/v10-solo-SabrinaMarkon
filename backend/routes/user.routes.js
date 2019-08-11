@@ -2,17 +2,11 @@ const express = require('express');
 const model = require('../models/user.model');
 const app = express();
 
-// app.get('/', (req, res) => {
-//   return res.send('Received a GET HTTP method');
-// });
-
 // 1) get all users.
 app.route('/').get(function(req, res) {
-  // get all the users from the db.
   model.find(function(err, users) {
     if (err) {
-      console.log(err);
-      return;
+      return res.status(404).send('No users found: ' + err);
     } else {
       return res.json(users);
     }
@@ -24,8 +18,7 @@ app.route('/:id').get(function(req, res) {
   let id = req.params.id;
   model.findById(id, function(err, user) {
     if (err) {
-      console.log(err);
-      return;
+      return res.status(404).send('User not found: ' + err);
     } else {
       return res.json(user);
     }
@@ -65,10 +58,10 @@ app.route('/update/:id').patch(function(req, res) {
       user.joined = req.body.joined;
       user.save()
         .then(user => {
-          return res.json('User updated successfully!');
+          return res.json('User ' + user.email + ' updated successfully!');
         })
         .catch(err => {
-          return res.status(400).send('Updating user failed: ' + err);
+          return res.status(400).send('Updating user ' + user.email + ' failed: ' + err);
         });
     }
   });
@@ -79,9 +72,9 @@ app.route('/delete/:id').delete(function(req, res) {
   let id = req.params.id;
   model.findByIdAndDelete(id, function(err, user) {
     if (!user) {
-      return res.status(404).send('User not found');
+      return res.status(404).send('User not found: ' + err);
     } else {
-      return res.json('User deleted successfully!');
+      return res.json('User ' + user.email + ' deleted successfully!');
     }
   });
 });
