@@ -50,7 +50,7 @@ const reputationUserSchema = new Schema({
   comment: {
     type: String,  
   },
-  publicComment: { // whether the userid receiving the rating wants the comment to show if there is one.
+  publicComment: { // whether the userid receiving the rating wants the comment to show on their profile.
     type: Boolean,
     required: true,
     default: false
