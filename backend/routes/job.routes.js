@@ -50,8 +50,8 @@ app.route('/update/:id').patch(function(req, res) {
       job.description = req.body.description;
       job.budgetRange = req.body.budgetRange;
       job.timeRange = req.body.timeRange;
-      job.tags = req.body.tags;
-      job.categories = req.body.categories;
+      job.tags = req.body.tags; // array
+      job.categories = req.body.categories; // array
       job.teamHired = req.body.teamHired;
       job.agreedPayment = req.body.agreedPayment;
       job.datePaidForWork = req.body.datePaidForWork;
