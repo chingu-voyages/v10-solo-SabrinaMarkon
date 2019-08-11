@@ -2,7 +2,7 @@ const express = require('express');
 const model = require('../models/jobIdCategoryId.model');
 const app = express();
 
-// 1) get all job categories.
+// 1) get all jobId=categoryId pairs.
 app.route('/').get(function(req, res) {
   model.find(function(err, jobIdCategoryId) {
     if (err) {
@@ -13,7 +13,7 @@ app.route('/').get(function(req, res) {
   });
 });
 
-// 2) get one job category.
+// 2) get one jobId=categoryId pair.
 app.route('/:id').get(function(req, res) {
   let id = req.params.id;
   model.findById(id, function(err, ) {
@@ -25,7 +25,7 @@ app.route('/:id').get(function(req, res) {
   });
 });
 
-// 3) add new job category.
+// 3) add new jobId=categoryId pairs.
 app.route('/add').post(function(req, res) {
   let jobIdCategoryId = new model(req.body);
   jobIdCategoryId.save()
@@ -39,7 +39,7 @@ app.route('/add').post(function(req, res) {
     })
 });
 
-// 4) update a job category.
+// 4) update a jobId=categoryId pair.
 app.route('/update/:id').patch(function(req, res) {
   let id = req.params.id;
   model.findById(id, function(err, jobIdCategoryId) {
@@ -59,7 +59,7 @@ app.route('/update/:id').patch(function(req, res) {
   });
 });
 
-// 5) delete a job category.
+// 5) delete a jobId=categoryId pair.
 app.route('/delete/:id').delete(function(req, res) {
   let id = req.params.id;
   model.findByIdAndDelete(id, function(err, category) {
