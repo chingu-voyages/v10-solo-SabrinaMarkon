@@ -41,6 +41,15 @@ const PaymentSchema = new Schema({
   datePaid: {
     type: Date,
     default: Date.now
+  },
+  howPaid: {
+    type: String,
+    required: true,
+    validate(value) {
+      if (!value) {
+        new Error('HowPaid is a required field')
+      }
+    } 
   }
 });
 
