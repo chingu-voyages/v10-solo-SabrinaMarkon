@@ -8,12 +8,14 @@ app.use(cors());
 const PORT = 4000; // backend port.
 
 // Routes:
-const userRouter = require('./routes/user.routes');
-app.use('/users', userRouter);
-const jobRouter = require('./routes/job.routes');
-app.use('/jobs', jobRouter);
+const categoryRouter = require('./routes/category.routes');
+app.use('/category', categoryRouter);
 const emailRouter = require('./routes/email.routes');
 app.use('/emails', emailRouter);
+const jobRouter = require('./routes/job.routes');
+app.use('/jobs', jobRouter);
+const userRouter = require('./routes/user.routes');
+app.use('/users', userRouter);
 
 // Connections:
 mongoose.connect(process.env.REACT_APP_MONGODB_CONNECTION_STRING, 
