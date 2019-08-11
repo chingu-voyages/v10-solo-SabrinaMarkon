@@ -10,6 +10,8 @@ const PORT = 4000; // backend port.
 // Routes:
 const userRouter = require('./routes/user.routes');
 app.use('/users', userRouter);
+const jobRouter = require('./routes/job.routes');
+app.use('/jobs', jobRouter);
 
 // Connections:
 mongoose.connect(process.env.REACT_APP_MONGODB_CONNECTION_STRING, 
