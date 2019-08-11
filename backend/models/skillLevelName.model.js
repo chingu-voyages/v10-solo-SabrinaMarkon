@@ -13,4 +13,4 @@ const skillLevelNameSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('skillLevelName', skillLevelNameSchema);
+module.exports = mongoose.model('SkillLevelName', skillLevelNameSchema);

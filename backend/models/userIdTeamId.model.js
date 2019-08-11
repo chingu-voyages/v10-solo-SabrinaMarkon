@@ -22,4 +22,4 @@ const userIdTeamIdSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('userIdTeamId', userIdTeamIdSchema);
+module.exports = mongoose.model('UserIdTeamId', userIdTeamIdSchema);
