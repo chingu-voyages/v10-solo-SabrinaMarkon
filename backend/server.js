@@ -24,6 +24,8 @@ const teamRouter = require('./routes/team.routes');
 app.use('/users', teamRouter);
 const userIdTeamIdRouter = require('./routes/userIdTeamId.routes');
 app.use('/userIdTeamIds', userIdTeamIdRouter);
+const userSkillRouter = require('./routes/userSkill.routes');
+app.use('/userSkills', userSkillRouter);
 const userRouter = require('./routes/user.routes');
 app.use('/users', userRouter);
 
