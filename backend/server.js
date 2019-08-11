@@ -12,6 +12,8 @@ const userRouter = require('./routes/user.routes');
 app.use('/users', userRouter);
 const jobRouter = require('./routes/job.routes');
 app.use('/jobs', jobRouter);
+const emailRouter = require('./routes/email.routes');
+app.use('/emails', emailRouter);
 
 // Connections:
 mongoose.connect(process.env.REACT_APP_MONGODB_CONNECTION_STRING, 

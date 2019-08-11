@@ -52,7 +52,7 @@ app.route('/update/:id').patch(function(req, res) {
       email.fromfield = req.body.from;
       email.messagetype = req.body.messagetype; // bid, offer, admin
       email.submittime = req.body.submittime;
-      email.sendtime = req.body.sendtime;
+      email.sent = req.body.sent;
       email.keep = req.body.keep; // boolean save?
       email.save()
         .then(email => {

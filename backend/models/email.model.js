@@ -29,7 +29,7 @@ const emailSchema = new Schema({
       }
     }
   },
-  from: {
+  fromfield: {
     type: String,
     required: true,
     validate(value) {
@@ -41,20 +41,19 @@ const emailSchema = new Schema({
   messagetype: {
     type: String,
     required: true,
-    validate(value) {
-      if (!value) {
-        new Error('Email message type required field')
-      }
-    }
+    default: 'admin'
   },
   submittime: {
-    type: Date
+    type: Date,
+    default: Date.now
   },
-  sendtime: {
-    type: Date
+  sent: {
+    type: Boolean,
+    default: false
   },
   keep: {
-    type: Boolean
+    type: Boolean,
+    default: false
   }
 });
 
