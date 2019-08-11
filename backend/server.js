@@ -20,6 +20,8 @@ const jobIdCategoryIdRouter = require('./routes/jobIdCategoryId.routes');
 app.use('/jobIdCategoryIds', jobIdCategoryIdRouter);
 const jobRouter = require('./routes/job.routes');
 app.use('/jobs', jobRouter);
+const paymentRouter = require('./routes/payment.routes');
+app.use('/payments', paymentRouter);
 const reputationTeamRouter = require('./routes/reputationTeam.routes');
 app.use('/reputationTeam', reputationTeamRouter);
 const reputationUserRouter = require('./routes/reputationUser.routes');
