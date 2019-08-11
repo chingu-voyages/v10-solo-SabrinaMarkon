@@ -11,6 +11,9 @@ const teamSchema = new Schema({
       }
     }
   },
+  portfolioUrl: {
+    type: String,
+  },
   datecreated:{
     type: Date,
     default: Date.now

@@ -47,6 +47,7 @@ app.route('/update/:id').patch(function(req, res) {
       return res.status(404).send('Team not found');
     } else {
       team.name = req.body.name;
+      team.portfolioUrl = req.body.portfolioUrl;
       team.datecreated = req.body.datecreated;
       team.save()
         .then(team => {

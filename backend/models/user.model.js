@@ -32,6 +32,9 @@ const userSchema = new Schema({
       }
     }
   },
+  portfolidUrl: {
+    type: String,
+  },
   street: {
     type: String,
     required: true,
