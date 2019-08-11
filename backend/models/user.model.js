@@ -32,6 +32,15 @@ const userSchema = new Schema({
       }
     }
   },
+  preferredTitle: {
+    type: String,
+    required: true,
+    validate(value) {
+      if(!value) {
+        new Error('Preferred title is a required field')
+      }
+    }
+  },
   portfolidUrl: {
     type: String,
   },

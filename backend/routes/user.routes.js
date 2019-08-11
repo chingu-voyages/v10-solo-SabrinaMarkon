@@ -49,6 +49,7 @@ app.route('/update/:id').patch(function(req, res) {
       user.email = req.body.email;
       user.firstname = req.body.firstname;
       user.lastname = req.body.lastname;
+      user.preferredTitle = req.body.preferredTitle;
       user.portfolioUrl = req.body.portfolioUrl;
       user.street = req.body.street;
       user.city = req.body.city;
