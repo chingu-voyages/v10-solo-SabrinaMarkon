@@ -9,19 +9,21 @@ const PORT = 4000; // backend port.
 
 // Routes:
 const categoryRouter = require('./routes/category.routes');
-app.use('/category', categoryRouter);
+app.use('/categories', categoryRouter);
 const emailRouter = require('./routes/email.routes');
 app.use('/emails', emailRouter);
 const jobIdCategoryIdRouter = require('./routes/jobIdCategoryId.routes');
-app.use('/jobIdCategoryId', jobIdCategoryIdRouter);
+app.use('/jobIdCategoryIds', jobIdCategoryIdRouter);
 const jobRouter = require('./routes/job.routes');
 app.use('/jobs', jobRouter);
 const skillLevelNamesRouter = require('./routes/skillLevelNames.routes');
 app.use('/skillLevelNames', skillLevelNamesRouter);
+const teamRoleRouter = require('./routes/teamRole.routes');
+app.use('/teamRoles', teamRoleRouter);
 const teamRouter = require('./routes/team.routes');
 app.use('/users', teamRouter);
 const userIdTeamIdRouter = require('./routes/userIdTeamId.routes');
-app.use('/userIdTeamId', userIdTeamIdRouter);
+app.use('/userIdTeamIds', userIdTeamIdRouter);
 const userRouter = require('./routes/user.routes');
 app.use('/users', userRouter);
 

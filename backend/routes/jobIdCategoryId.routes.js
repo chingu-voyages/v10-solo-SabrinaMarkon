@@ -16,7 +16,7 @@ app.route('/').get(function(req, res) {
 // 2) get one jobId=categoryId pair.
 app.route('/:id').get(function(req, res) {
   let id = req.params.id;
-  model.findById(id, function(err, ) {
+  model.findById(id, function(err, jobIdCategoryId) {
     if (err) {
       return res.status(404).send('The jobIdCategoryId record was not found: ' + err);
     } else {
