@@ -46,6 +46,7 @@ app.route('/update/:id').patch(function(req, res) {
     if (!job) {
       return res.status(404).send('Job not found');
     } else {
+      job.userId = req.body.userId;
       job.title = req.body.title;
       job.description = req.body.description;
       job.budgetRange = req.body.budgetRange;

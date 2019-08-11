@@ -2,6 +2,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const jobSchema = new Schema({
+  userId: { // user who posted the job.
+    type: String,
+    required: true,
+    validate(value) {
+      if (!value) {
+        new Error('UserId is a required field')
+      }
+    }
+  },
   title: {
     type: String,
     required: true,
