@@ -2,6 +2,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const TeamRoleSchema = new Schema({
+  role: {
+    type: String,
+    required: true,
+    validate(value) {
+      if (!value) {
+        new Error('User role is a required field')
+      }
+    }
+  },
   userId: {
     type: String,
     required: true,

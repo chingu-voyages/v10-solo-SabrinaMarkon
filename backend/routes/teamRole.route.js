@@ -46,6 +46,7 @@ app.route('/update/:id').patch(function(req, res) {
     if (!teamRole) {
       return res.status(404).send('The teamRole was not found');
     } else {
+      teamRole.role = req.body.role;
       teamRole.userId = req.body.userId;
       teamRole.teamId = req.body.teamId;
       teamRole.jobId = req.body.jobId;
