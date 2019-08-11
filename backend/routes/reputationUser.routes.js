@@ -52,6 +52,7 @@ app.route('/update/:id').patch(function(req, res) {
       reputationUser.teamId = req.body.teamId;
       reputationUser.rating = req.body.rating;
       reputationUser.comment = req.body.comment;
+      reputationTeam.publicComment = req.body.publicComment;
       reputationUser.save()
         .then(reputationUser => {
           return res.json('ReputationUser updated successfully!');
