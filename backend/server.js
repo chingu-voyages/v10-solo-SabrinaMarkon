@@ -1,21 +1,21 @@
-// get private variables:
-require('dotenv').config({path: '.env'});
+require('dotenv').config({path: '.env'}); // env variables.
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
-const cors = require('cors');
-// connect to mongodb in an object-oriented way.
-const mongoose = require('mongoose');
-const PORT = 4000;
-
-let User = require('./models/user.model');
-
-// pass middleware
+app.use(express.json()); // come back as json.
+const mongoose = require('mongoose'); // mongodb in an oop way :3
+const cors = require('cors'); // pass some middleware
 app.use(cors());
-app.use(bodyParser.json());
+const PORT = 4000; // backend port.
 
+// Routes:
+const userRouter = require('./routes/user.routes');
+app.use('/users', userRouter);
+
+// Connections:
 mongoose.connect(process.env.REACT_APP_MONGODB_CONNECTION_STRING, 
-  { useNewUrlParser: true });
+  { useNewUrlParser: true,
+    useCreateIndex: true
+  });
 const connection = mongoose.connection;
 
 connection.once('open', function() {
