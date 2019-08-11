@@ -34,7 +34,7 @@ const reputationUserSchema = new Schema({
     required: true,
     validate(value) {
       if (!value) {
-        new Error('teamId is a required field')
+        new Error('TeamId is a required field')
       }
     }  
   },
