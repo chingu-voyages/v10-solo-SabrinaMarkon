@@ -12,6 +12,8 @@ const categoryRouter = require('./routes/category.routes');
 app.use('/category', categoryRouter);
 const emailRouter = require('./routes/email.routes');
 app.use('/emails', emailRouter);
+const jobCategoryRouter = require('./routes/jobcategory.routes');
+app.use('/category', jobCategoryRouter);
 const jobRouter = require('./routes/job.routes');
 app.use('/jobs', jobRouter);
 const userRouter = require('./routes/user.routes');
