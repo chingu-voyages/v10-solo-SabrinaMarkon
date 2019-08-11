@@ -16,6 +16,8 @@ const jobIdCategoryIdRouter = require('./routes/jobIdCategoryId.routes');
 app.use('/jobIdCategoryId', jobIdCategoryIdRouter);
 const jobRouter = require('./routes/job.routes');
 app.use('/jobs', jobRouter);
+const skillLevelNamesRouter = require('./routes/skillLevelNames.routes');
+app.use('/skillLevelNames', skillLevelNamesRouter);
 const teamRouter = require('./routes/team.routes');
 app.use('/users', teamRouter);
 const userIdTeamIdRouter = require('./routes/userIdTeamId.routes');
