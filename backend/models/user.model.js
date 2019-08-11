@@ -78,10 +78,11 @@ const userSchema = new Schema({
     }
   },
   phone: {
-    type: String,
+    type: String
   },
   joined: {
     type: Date,
+    default: Date.now
   },
 });
 

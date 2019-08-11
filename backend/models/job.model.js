@@ -57,13 +57,14 @@ const jobSchema = new Schema({
     }
   },
   teamHired: {
-    type: String,
+    type: String
   },
   agreedPayment: {
-    type: Number,
+    type: Number
   },
   datePaidForWork: {
     type: Date,
+    default: Date.now
   }
 });
 
