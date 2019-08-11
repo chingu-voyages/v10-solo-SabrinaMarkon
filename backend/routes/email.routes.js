@@ -48,10 +48,9 @@ app.route('/update/:id').patch(function(req, res) {
     } else {
       email.subject = req.body.subject;
       email.message = req.body.message;
-      email.to = req.body.to;
-      email.from = req.body.from;
-      email.tags = req.body.tags;
-      email.type = req.body.type; // bid, offer, admin
+      email.tofield = req.body.to;
+      email.fromfield = req.body.from;
+      email.messagetype = req.body.messagetype; // bid, offer, admin
       email.submittime = req.body.submittime;
       email.sendtime = req.body.sendtime;
       email.keep = req.body.keep; // boolean save?
