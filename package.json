@@ -7,7 +7,7 @@
     "bootstrap": "^4.3.1",
     "jquery": "^3.5.0",
     "kind-of": "^6.0.3",
-    "minimist": "^0.2.1",
+    "minimist": "^1.2.6",
     "popper.js": "^1.15.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
